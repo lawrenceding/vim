@@ -30,3 +30,9 @@ sudo apt-get install ctags
 ```
 sudo apt-get install cscope
 ```
+####7.add fonts for airline fancy
+```
+mkdir ~/.fonts
+cp ~/.vim/fonts-for-airline/Monaco_Linux-Powerline.ttf ~/.fonts
+fc-cache -vf
+```

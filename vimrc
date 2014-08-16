@@ -59,8 +59,9 @@ else
   "set guifont=YaHei\ Mono\ 11
   "set guifont=YaHei\ Consolas\ hybrid\ for\ Powerline\ 11
   set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 10
-  "set guifont=Monaco
   set guifontwide=WenQuanYi\ Zen\ Hei\ Mono\ 10
+  "set guifont=Monaco:h12
+  "set guifontwide=Monaco:h12
 endif
 "}}}
 " UI {{{
@@ -538,15 +539,15 @@ let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'mixed', 'line']
 Bundle 'bling/vim-airline'
 let g:airline_theme="dark"
 " old vim-powerline symbols
-"let g:airline_symbols = {}
-"let g:airline_left_sep = '⮀'
-"let g:airline_left_alt_sep = '⮁'
-"let g:airline_right_sep = '⮂'
-"let g:airline_right_alt_sep = '⮃'
-"let g:airline_symbols.branch = '⭠'
-"let g:airline_symbols.readonly = '⭤'
-"let g:airline_symbols.linenr = '⭡'
-"let g:airline_powerline_fonts = 1
+let g:airline_symbols = {}
+let g:airline_left_sep = '⮀'
+let g:airline_left_alt_sep = '⮁'
+let g:airline_right_sep = '⮂'
+let g:airline_right_alt_sep = '⮃'
+let g:airline_symbols.branch = '⭠'
+let g:airline_symbols.readonly = '⭤'
+let g:airline_symbols.linenr = '⭡'
+let g:airline_powerline_fonts = 1
 "}}}
 " colorv {{{
 " ---------------
