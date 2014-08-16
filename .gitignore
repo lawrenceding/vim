@@ -1,3 +1,7 @@
 bundle/*
 backup/*
 tmp/*
+tags
+types_c.taghl
+types_py.taghl
+types_ruby.taghl
