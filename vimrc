@@ -136,22 +136,22 @@ highlight SpecialKey guifg=#444444 guibg=NONE gui=NONE ctermfg=238 ctermbg=NONE 
 "set cursorcolumn
 "set cursorline
 
-if &term=="xterm"
-  " solid underscore
-  let &t_SI .= "\<Esc>[3 q"
-  " solid block
-  let &t_EI .= "\<Esc>[1 q"
-  " 1 or 0 -> blinking block
-  " 3 -> blinking underscore
-  " change cursor shape in gnome-terminal
-  au InsertEnter * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
-  au InsertLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
-  au VimLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
-elseif &term=="rxvt-unicode-256color"
-  " change cursor color in urxvt
-  let &t_SI = "\<Esc>]12;red\x7"
-  let &t_EI = "\<Esc>]12;grey80\x7"
-endif
+"if &term=="xterm"
+  "" solid underscore
+  "let &t_SI .= "\<Esc>[3 q"
+  "" solid block
+  "let &t_EI .= "\<Esc>[1 q"
+  "" 1 or 0 -> blinking block
+  "" 3 -> blinking underscore
+  "" change cursor shape in gnome-terminal
+  "au InsertEnter * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
+  "au InsertLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
+  "au VimLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
+"elseif &term=="rxvt-unicode-256color"
+  "" change cursor color in urxvt
+  "let &t_SI = "\<Esc>]12;red\x7"
+  "let &t_EI = "\<Esc>]12;grey80\x7"
+"endif
 "}}}
 " Sounds {{{
 " ---------------
@@ -350,32 +350,32 @@ endif
 "}}}
 " TagHighlight {{{
 " ---------------
-Bundle 'abudden/TagHighlight'
-nnoremap ut :UpdateTypesFile <cr>
-" colors for Taghighlight {{{
-hi Class guifg=#800080 guibg=NONE gui=NONE ctermfg=90 ctermbg=NONE cterm=NONE
-hi DefinedName guifg=#EE82EE guibg=NONE gui=NONE ctermfg=175 ctermbg=NONE cterm=NONE
-hi Function guifg=#007777 guibg=NONE gui=NONE ctermfg=30 ctermbg=NONE cterm=NONE
-hi EnumerationValue guifg=#C000C0 guibg=NONE gui=NONE ctermfg=164 ctermbg=NONE cterm=NONE
-hi EnumerationName guifg=#FF22FF guibg=NONE gui=NONE ctermfg=201 ctermbg=NONE cterm=NONE
-hi Member guifg=#A9A9A9 guibg=NONE gui=NONE ctermfg=145 ctermbg=NONE cterm=NONE
-hi Structure guifg=#FF8080 guibg=NONE gui=NONE ctermfg=210 ctermbg=NONE cterm=NONE
-hi Type guifg=#FF8000 guibg=NONE gui=NONE ctermfg=208 ctermbg=NONE cterm=NONE
-hi Union guifg=#808080 guibg=NONE gui=NONE ctermfg=102 ctermbg=NONE cterm=NONE
-hi GlobalVariable guifg=#df5f87 guibg=NONE gui=NONE ctermfg=168 ctermbg=NONE cterm=NONE
-hi LocalVariable guifg=#AAA14C guibg=NONE gui=NONE ctermfg=143 ctermbg=NONE cterm=NONE
-hi GlobalConstant guifg=#df5f87 guibg=NONE gui=NONE ctermfg=168 ctermbg=NONE cterm=NONE
-hi cPreCondit guifg=#ff8700 guibg=NONE gui=NONE ctermfg=208 ctermbg=NONE cterm=NONE
-hi cTODO guifg=#ff0000 guibg=#dfff00 gui=NONE ctermfg=196 ctermbg=190 cterm=NONE
+"Bundle 'abudden/TagHighlight'
+"nnoremap ut :UpdateTypesFile <cr>
+"" colors for Taghighlight {{{
+"hi Class guifg=#800080 guibg=NONE gui=NONE ctermfg=90 ctermbg=NONE cterm=NONE
+"hi DefinedName guifg=#EE82EE guibg=NONE gui=NONE ctermfg=175 ctermbg=NONE cterm=NONE
+"hi Function guifg=#007777 guibg=NONE gui=NONE ctermfg=30 ctermbg=NONE cterm=NONE
+"hi EnumerationValue guifg=#C000C0 guibg=NONE gui=NONE ctermfg=164 ctermbg=NONE cterm=NONE
+"hi EnumerationName guifg=#FF22FF guibg=NONE gui=NONE ctermfg=201 ctermbg=NONE cterm=NONE
+"hi Member guifg=#A9A9A9 guibg=NONE gui=NONE ctermfg=145 ctermbg=NONE cterm=NONE
+"hi Structure guifg=#FF8080 guibg=NONE gui=NONE ctermfg=210 ctermbg=NONE cterm=NONE
+"hi Type guifg=#FF8000 guibg=NONE gui=NONE ctermfg=208 ctermbg=NONE cterm=NONE
+"hi Union guifg=#808080 guibg=NONE gui=NONE ctermfg=102 ctermbg=NONE cterm=NONE
+"hi GlobalVariable guifg=#df5f87 guibg=NONE gui=NONE ctermfg=168 ctermbg=NONE cterm=NONE
+"hi LocalVariable guifg=#AAA14C guibg=NONE gui=NONE ctermfg=143 ctermbg=NONE cterm=NONE
+"hi GlobalConstant guifg=#df5f87 guibg=NONE gui=NONE ctermfg=168 ctermbg=NONE cterm=NONE
+"hi cPreCondit guifg=#ff8700 guibg=NONE gui=NONE ctermfg=208 ctermbg=NONE cterm=NONE
+"hi cTODO guifg=#ff0000 guibg=#dfff00 gui=NONE ctermfg=196 ctermbg=190 cterm=NONE
 "}}}
 "}}}
 " Xterm-color-table {{{
 Bundle 'guns/xterm-color-table.vim'
 "}}}
-" vimproc {{{
-" ---------------
-Bundle 'Shougo/vimproc'
-"}}}
+"" vimproc {{{
+"" ---------------
+"Bundle 'Shougo/vimproc'
+""}}}
 " vimshell {{{
 " ---------------
 Bundle 'Shougo/vimshell'
@@ -383,7 +383,9 @@ Bundle 'Shougo/vimshell'
 " Neocomplete {{{
 " ---------------
 Bundle 'Shougo/neocomplete'
+"Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
+Bundle 'Shougo/neosnippet-snippets'
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
 let g:neocomplete#sources#syntax#min_keyword_length = 3
@@ -534,15 +536,15 @@ let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'mixed', 'line']
 Bundle 'bling/vim-airline'
 let g:airline_theme="dark"
 " old vim-powerline symbols
-let g:airline_symbols = {}
-let g:airline_left_sep = '⮀'
-let g:airline_left_alt_sep = '⮁'
-let g:airline_right_sep = '⮂'
-let g:airline_right_alt_sep = '⮃'
-let g:airline_symbols.branch = '⭠'
-let g:airline_symbols.readonly = '⭤'
-let g:airline_symbols.linenr = '⭡'
-let g:airline_powerline_fonts = 1
+"let g:airline_symbols = {}
+"let g:airline_left_sep = '⮀'
+"let g:airline_left_alt_sep = '⮁'
+"let g:airline_right_sep = '⮂'
+"let g:airline_right_alt_sep = '⮃'
+"let g:airline_symbols.branch = '⭠'
+"let g:airline_symbols.readonly = '⭤'
+"let g:airline_symbols.linenr = '⭡'
+"let g:airline_powerline_fonts = 1
 "}}}
 " colorv {{{
 " ---------------
