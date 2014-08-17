@@ -56,12 +56,8 @@ if has('win32') || has('win64')
   set guifont=DejaVu_Sans_Mono_for_Powerline:h10
   set guifontwide=Yahei_Mono:h10:cGB2312
 else
-  "set guifont=YaHei\ Mono\ 11
-  "set guifont=YaHei\ Consolas\ hybrid\ for\ Powerline\ 11
   set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 10
   set guifontwide=WenQuanYi\ Zen\ Hei\ Mono\ 10
-  "set guifont=Monaco:h12
-  "set guifontwide=Monaco:h12
 endif
 "}}}
 " UI {{{
@@ -199,7 +195,6 @@ elseif has('gui_macvim')
   " Custom Menlo font for Powerline
   " From: https://github.com/Lokaltog/vim-powerline/wiki/Patched-fonts
   set guifont=Menlo\ for\ Powerline:h12
-  "set guifont=Monaco:h12
 
   " Hide Toolbar in MacVim
   if has("gui_running")
@@ -427,7 +422,7 @@ inoremap <expr><C-y>  neocomplete#close_popup()
 inoremap <expr><C-e>  neocomplete#cancel_popup()
 
 " Enable omni completion.
-"autocmd FileType c,cpp setlocal omnifunc=ccomplete#Complete
+autocmd FileType c,cpp setlocal omnifunc=ccomplete#Complete
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS

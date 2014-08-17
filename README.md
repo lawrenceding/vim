@@ -33,6 +33,6 @@ sudo apt-get install cscope
 ####7.add fonts for airline fancy
 ```
 mkdir ~/.fonts
-cp ~/.vim/fonts-for-airline/Monaco_Linux-Powerline.ttf ~/.fonts
+cp ~/.vim/fonts-for-airline/Inconsolata-dz-Powerline.otf ~/.fonts
 fc-cache -vf
 ```
