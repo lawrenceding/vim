@@ -1,5 +1,5 @@
 " =================================================
-" vimrc from ghostylee <ghosty.lee.1984@gmail.com>
+" vimrc from Lawrence <lawrence.dingxl@gmail.com>
 " =================================================
 
 " ----------------------------------------
@@ -349,7 +349,8 @@ endif
 " TagHighlight {{{
 " ---------------
 "Bundle 'abudden/TagHighlight'
-nnoremap ut :UpdateTypesFile <cr>
+"nnoremap ut :UpdateTypesFile <cr>
+nnoremap th :UpdateTypesFile <cr>
  "colors for Taghighlight {{{
 hi Class guifg=#800080 guibg=NONE gui=NONE ctermfg=90 ctermbg=NONE cterm=NONE
 hi DefinedName guifg=#EE82EE guibg=NONE gui=NONE ctermfg=175 ctermbg=NONE cterm=NONE
