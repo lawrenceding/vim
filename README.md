@@ -31,6 +31,8 @@ sudo apt-get install ctags
 sudo apt-get install cscope
 ```
 ####7.add fonts for airline fancy
+Got the powerline font from https://gist.github.com/qrush/1595572
+and don't need to download manual, it's in the repository already.
 ```
 mkdir ~/.fonts
 cp ~/.vim/fonts-for-airline/Inconsolata-dz-Powerline.otf ~/.fonts
