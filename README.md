@@ -30,7 +30,7 @@ sudo apt-get install ctags
 ```
 sudo apt-get install cscope
 ```
-####7.add fonts for airline fancy
+####8.add fonts for airline fancy
 Got the powerline font from https://gist.github.com/qrush/1595572
 and don't need to download manual, it's in the repository already.
 ```
@@ -38,3 +38,9 @@ mkdir ~/.fonts
 cp ~/.vim/fonts-for-airline/Inconsolata-dz-Powerline.otf ~/.fonts
 fc-cache -vf
 ```
+####9.trouble shooting
+a.If there is error occurs when use neocomplete, please check priviledge of
+~/.cache/neocomplete, for my environment, it is: 
+drwxr-xr-x  8 root root  4096  8月 21 13:51 neocomplete
+change owner to your login user:
+sudo chown -R xxx:xxx neocomplete
