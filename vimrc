@@ -178,6 +178,9 @@ autocmd FileType xml set foldmethod=syntax
 " Path setting {{{
 set path+=;,include;inc;
 "}}}
+" cpoy to system clip board {{{
+:vmap <C-c> "+y
+"}}}
 "}}}
 " ----------------------------------------
 " Platform Specific Configuration {{{
