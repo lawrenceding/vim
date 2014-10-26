@@ -32,7 +32,7 @@ sudo apt-get install cscope
 ```
 ####8.add fonts for airline fancy
 Got the powerline font from https://gist.github.com/qrush/1595572
-and don't need to download manual, it's in the repository already.
+and don't need to download manually, it's in the repository already.
 ```
 mkdir ~/.fonts
 cp ~/.vim/fonts-for-airline/Inconsolata-dz-Powerline.otf ~/.fonts
@@ -44,3 +44,5 @@ a.If there is error occurs when use neocomplete, please check priviledge of
 drwxr-xr-x  8 root root  4096  8月 21 13:51 neocomplete
 change owner to your login user:
 sudo chown -R xxx:xxx neocomplete
+b.If the neocomplete can't work properly and it prompts that there is if_lua
+issue, please install vim-gnome instead of vim
