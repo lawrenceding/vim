@@ -179,8 +179,12 @@ autocmd FileType xml set foldmethod=syntax
 set path+=;,include;inc;
 "}}}
 " Copy(paste) to(from) system clip board {{{
-:vmap <C-c> "+y
-:nmap <C-v> "+p
+"Use clipboard '+' can't paste to other program
+":vmap <C-c> "+y
+":nmap <C-v> "+p
+"Use clipboard '*' can paste to other program
+:vmap <C-c> "*y
+:nmap <C-v> "*p
 "}}}
 "}}}
 " ----------------------------------------
@@ -353,8 +357,8 @@ endif
 " TagHighlight {{{
 " ---------------
 "Bundle 'abudden/TagHighlight'
-"nnoremap ut :UpdateTypesFile <cr>
-nnoremap th :UpdateTypesFile <cr>
+nnoremap ut :UpdateTypesFile <cr>
+"nnoremap th :UpdateTypesFile <cr>
  "colors for Taghighlight {{{
 hi Class guifg=#800080 guibg=NONE gui=NONE ctermfg=90 ctermbg=NONE cterm=NONE
 hi DefinedName guifg=#EE82EE guibg=NONE gui=NONE ctermfg=175 ctermbg=NONE cterm=NONE
@@ -596,6 +600,12 @@ Bundle 'wavded/vim-stylus'
 Bundle 'VimClojure'
 Bundle 'skammer/vim-css-color'
 Bundle 'xml.vim'
+"}}}
+
+" Compatible with windows shortcuts
+" Syntax  {{{
+  "source $VIMRUNTIME/mswin.vim
+  "behave mswin
 "}}}
 " ----------------------------------------
 " transparent bg in vim
