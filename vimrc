@@ -179,12 +179,13 @@ autocmd FileType xml set foldmethod=syntax
 set path+=;,include;inc;
 "}}}
 " Copy(paste) to(from) system clip board {{{
-"Use clipboard '+' can't paste to other program
-":vmap <C-c> "+y
-":nmap <C-v> "+p
-"Use clipboard '*' can paste to other program
-:vmap <C-c> "*y
-:nmap <C-v> "*p
+"Use clipboard '+' can share context with other programs
+:vmap <C-c> "+y
+:nmap <C-v> "+p
+"Use clipboard '*' can share context between windows and ubuntu through
+"synergy
+":vmap <C-c> "*y
+":nmap <C-v> "*p
 "}}}
 "}}}
 " ----------------------------------------
@@ -552,6 +553,23 @@ let g:airline_symbols.branch = '⭠'
 let g:airline_symbols.readonly = '⭤'
 let g:airline_symbols.linenr = '⭡'
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = '⮀'
+let g:airline#extensions#tabline#buffer_idx_mode = 1
+let g:airline#extensions#tabline#show_buffers = 1
+let g:airline#extensions#tabline#show_tabs = 0
+let g:airline#extensions#tabline#fnamemod = ':p:t'
+nmap <leader>1 <Plug>AirlineSelectTab1
+nmap <leader>2 <Plug>AirlineSelectTab2
+nmap <leader>3 <Plug>AirlineSelectTab3
+nmap <leader>4 <Plug>AirlineSelectTab4
+nmap <leader>5 <Plug>AirlineSelectTab5
+nmap <leader>6 <Plug>AirlineSelectTab6
+nmap <leader>7 <Plug>AirlineSelectTab7
+nmap <leader>8 <Plug>AirlineSelectTab8
+nmap <leader>9 <Plug>AirlineSelectTab9
+nmap <leader>- <Plug>AirlineSelectPrevTab
+nmap <leader>+ <Plug>AirlineSelectNextTab
 "}}}
 " colorv {{{
 " ---------------
@@ -582,6 +600,15 @@ Bundle 'gregsexton/gitv'
 " vim-gitgutter {{{
 " ---------------
 "Bundle 'airblade/vim-gitgutter'
+"}}}
+" vim-signify {{{
+" ---------------
+Bundle 'mhinz/vim-signify'
+"}}}
+" fzf {{{
+" ---------------
+Bundle 'junegunn/fzf'
+nmap <silent> <leader>f  :FZF ~<cr>
 "}}}
 "}}}
 " ----------------------------------------
